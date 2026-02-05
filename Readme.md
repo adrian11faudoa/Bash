@@ -1,9 +1,9 @@
 # Bash Commands
-## Info:
+## Info
 All commands are Case Sensitive <br>
 apt : Advanced Package Tool <br>
 sudo : superuser do <br>
- ~ : /home/<username> <br>
+ ~ : /home/username <br>
 
 <br>
 
@@ -35,65 +35,67 @@ Update System
 <br>
 
 ## System Analysis
-shows the time of the system have been up, amount of users 
+Shows the time, since when the system have been up, and amount of users 
  
     uptime
 
-display amoun of free and used memory in the system 
+Display amoun of free and used memory in the system 
 
     free
-
-show processes goin on 
-
-    ps
-
-report disk space usage 
-
-    df 
-
-report disk space usage, but in a human format 
-
-    df -h
-
-to manipulate disk partition 
-
-    sudo fdisk -l
-
-list block devices 
-
-    lsblk
 
 display Linux processes 
 
     top
 
-install htop (better top) 
+Show processes goin on 
 
-    sudo apt install htop 
+    ps
+
+    Report disk space usage 
+
+        df 
+
+    Report disk space usage, but in a human format 
+
+        df -h
+
+    Use to manipulate disk partition 
+
+        sudo fdisk -l
+
+    List block devices 
+
+        lsblk
+
+
+
+    ? Install htop (better top) 
+
+        sudo apt install htop 
 
 <br>
 
 ## Network
-configure a network interface 
+Configure a network interface (install ifconfig)
     
-    sudo apt install net-tools (install ifconfig)
+    sudo apt install net-tools 
 
-show routing, network, interfaces 
+    show routing, network, interfaces 
 
-    ip a
+        ip a
 
 <br>
 
 ## Manage Packages
-check for updates in the packages 
+Check for updates in the packages 
     
     sudo apt update
 
-upgrade a package 
+Upgrade a package 
 
     sudo apt upgrade  
 
-search for a package 
+Search for a package 
 
     sudo apt search <ex: zip, app> 
 
@@ -101,7 +103,7 @@ install a package
     
     sudo apt install <zip>
 
-remove a package 
+Remove a package 
 
     sudo apt remove <zip>
 
@@ -120,19 +122,19 @@ Print Working Directory , show directory
 
     pwd 
 
-list , show whats in the folder
+List , show whats in the folder
 
     ls
 
-list the contents with a "long list format"
+List the contents with a "long list format"
 
     ls -l
 
-list all the content, even hidden
+List all the content, even hidden (-a /or/ --all)
 
-    ls -a /or/ --all
+    ls -a
 
-join together -l and -a
+Join together -l and -a
 
     ls -la
 
@@ -140,57 +142,57 @@ join together -l and -a
 
     ls -lah
 
-list whats in the root file system
+List whats in the root file system
 
     ls /
 
-change directory
+Change directory
 
     cd <folder_name>
 
-go back a folder
+Go back a folder
 
     cd ..
 
-go back 2 folders, each set of dots represent a folder
+Go back 2 folders, each set of dots represent a folder
 
     cd ../..
 
-go to the root file
+Go to the root file
 
     cd /
 
 <br>
-info about a file
+Info about a file
     
     file <file with extension> 
 
-print the content of a file or 
+Print the content of a file or 
     
     cat <file>
 
-concatenate files together
+Concatenate files together
     
     cat <file> <file2> > <all file> 
 
-shows first lines in a file
+Shows first lines in a file
     
     head <file> 
 
-shows last lines in a file
+Shows last lines in a file
     
     tail <file> 
 
-to see what's in a file
+To see what's in a file
     
     more <filename> 
 
 <br>
-word count: showed you how many lines were in the file, how many words, and how many bytes
+Word count: showed you how many lines were in the file, how many words, and how many bytes
     
     wc <file.txt>
 
-diff is a command to view the difference between two files
+Diff is a command to view the difference between two files
     
     diff <file_1> <file_2> 
 
@@ -219,98 +221,6 @@ Add Key To GitHub
     Paste key → Save.
 
 <br>
-
-
-    echo <Message in the terminal> : print to the terminal
-
-    echo <text> >> <file name> : print to a file 
-
-    pwd : print working directory , show directory 
-
-
-    ls : list , show whats in the folder
-
-    ls -l : list the contents with a "long list format"
-
-    ls -a /or/ --all: list all the content, even hidden
-
-    ls / :list whats in the root file system
-
-
-    cd <folder_name> : change directory
-
-    cd .. : go back a folder
-
-    cd ../.. :go back 2 folders, each set of dots represent a folder
-
-
-    more <filename> : to see what's in a file
-
-    clear : clean the terminal
-
-    --help : Help Flag, to use with other commands
-
-    man <command> :manual of the command
-
-
-    mkdir <folder name> : make a new folder
-
-    mkdir <folder path>/<new folder name> : create a new folder in other directory
-
-    touch <file name> /or/ <directory>: create a file
-
-
-    cp <file> <destination> : copy a file to a folder
-
-    cp -r <folder> <destination> : copy a folder to a new folder
-    
-    cp <filename> <new_name> : copy a file to a new file
-
-    mv <file name> <new file name> /or/ <destination> : rename or move something
-
-
-    find : to view a file tree, shows doc in the directory and inside of each
-
-    find <folder> : to view the tree from a different folder
-
-    find -name <file name> /or/ <folder name> : search for a file directory or folder
-
-
-    rm <file name> : remove a file
-
-    rmdir <folder name> : remove directory
-
-    rmdir -r <folder name> : remove directory with everything inside
-    
-    exit : exit the terminal
-
-
-    sleep <sec>: pause execution for a num of sec
-     
-    <echo hello test> > <filename.txt> <<redirect an output to a file, create or overwrite a file
-
-    <echo hello test> >> <filename.txt> <<redirect an output to a file, append
-
-
-    <command> < <filename_for_stdin>
-
-    <command_1> | <command_2> <<This will take the stdout from command_1 and use it as the stdin for command_2
-
-    wc <file.txt> <<word count: showed you how many lines were in the file, how many words, and how many bytes
-
-    <<grep is a command for searching for patterns in text
-    grep --color -n '<pattern>' <filename>
-
-    sed 's/<pattern_1>/<replacement_1>/; s/<pattern_2>/<replacement_2>/'
-
-    <<diff is a command to view the difference between two files
-    diff <file_1> <file_2>
-
-
-print the content of a file
-    
-    cat <file>
-
 
 
 
@@ -374,3 +284,10 @@ grep --color -n '<pattern>' <filename>
 
 sed 's/<pattern_1>/<replacement_1>/; s/<pattern_2>/<replacement_2>/'
 
+<<diff is a command to view the difference between two files
+    diff <file_1> <file_2>
+
+
+print the content of a file
+    
+    cat <file>
