@@ -9,88 +9,113 @@ sudo : superuser do <br>
 
 
 ## Admin
-Check for Linux Distro <br>
+Check for Linux Distro 
+    
     lsb_release -a
 
-Update System <br>
+Update System 
+    
     sudo apt update
 
-? delete user <br>
+? delete user 
+    
     sudo deluser --remove-home username
 
 ? stop user activity <br>
+    
     sudo kill -9 $(pgrep -u oldname)
 
 ? search for users <br>
+    
     cut -d: -f1 /etc/passwd
 
 ? human user <br>
+    
     awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
 
 
 ### System Analysis
 shows the time of the system have been up, amount of users <br>
->   uptime
+ 
+    uptime
 
 display amoun of free and used memory in the system <br>
->free
+
+    free
 
 show processes goin on <br>
->ps
+
+    ps
 
 report disk space usage <br>
->df 
+
+    df 
 
 report disk space usage, but in a human format <br>
->df -h
+
+    df -h
 
 to manipulate disk partition <br>
->sudo fdisk -l
+
+    sudo fdisk -l
 
 list block devices <br>
->lsblk
+
+    lsblk
 
 display Linux processes <br>
->top
+
+    top
 
 install htop (better top) <br>
->sudo apt install htop 
+
+    sudo apt install htop 
 
 
 ## Network
 configure a network interface <br>
->sudo apt install net-tools (install ifconfig)
+    
+    sudo apt install net-tools (install ifconfig)
 
 show routing, network, interfaces <br>
->ip a
+
+    ip a
 
 
 ## Manage Packages
 check for updates in the packages <br>
->sudo apt update
+    
+    sudo apt update
 
 upgrade a package <br>
->sudo apt upgrade  
+
+    sudo apt upgrade  
 
 search for a package <br>
->sudo apt search <ex: zip, app> 
+
+    sudo apt search <ex: zip, app> 
 
 install a package <br>
->sudo apt install <zip>
+    
+    sudo apt install <zip>
 
 remove a package <br>
->sudo apt remove <zip>
+
+    sudo apt remove <zip>
 
 
 ## Navegation and General Use
 Print text to the terminal <br>
->echo <Text, $VAR, ~>
+
+    echo <Text, $VAR, ~>
 
 Print to a file <br>
->echo <text> >> <file name>
+
+    echo <text> >> <file name>
 
 Print Working Directory , show directory <br>
->pwd 
+
+    pwd 
 
 ls : list , show whats in the folder
 ls -l : list the contents with a "long list format"
@@ -117,21 +142,27 @@ diff <file_1> <file_2>
 
 ### SSH Keys
 Create SSH Key (press Enter for defaults) <br>
->ssh-keygen -t ed25519 -C "afa1823@gmail.com"
+
+    ssh-keygen -t ed25519 -C "afa1823@gmail.com"
 
 Start SSH Agent <br>
->eval "$(ssh-agent -s)"
+    
+    eval "$(ssh-agent -s)"
 
 Add Key <br>
->ssh-add ~/.ssh/id_ed25519
+    
+    ssh-add ~/.ssh/id_ed25519
 
 Copy Public Key <br>
->cat ~/.ssh/id_ed25519.pub
+
+    cat ~/.ssh/id_ed25519.pub
 
 Add Key To GitHub <br>
->>GitHub → Settings → SSH and GPG Keys → New SSH Key
->>Paste key → Save.
+    
+    GitHub → Settings → SSH and GPG Keys → New SSH Key
+    Paste key → Save.
 
+<br>
 
 
     echo <Message in the terminal> : print to the terminal
