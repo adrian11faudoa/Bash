@@ -2,86 +2,94 @@
 
 ## Info:
 
-    All commands are Case Sensitive
-    apt : Advanced Package Tool
-    sudo : superuser do
-    ~ : /home/adr11an
+All commands are Case Sensitive <br>
+apt : Advanced Package Tool <br>
+sudo : superuser do <br>
+ ~ : /home/adr11an <br>
 
 
 ## Admin
-Check for Linux Distro
-> lsb_release -a
+Check for Linux Distro <br>
+    lsb_release -a
 
-Update System
-> sudo apt update
+Update System <br>
+    sudo apt update
 
-? delete user
->sudo deluser --remove-home username
+? delete user <br>
+    sudo deluser --remove-home username
 
-? stop user activity
->sudo kill -9 $(pgrep -u oldname)
+? stop user activity <br>
+    sudo kill -9 $(pgrep -u oldname)
 
-? search for users
->cut -d: -f1 /etc/passwd
+? search for users <br>
+    cut -d: -f1 /etc/passwd
 
-? human user
->awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
+? human user <br>
+    awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
 
 
 ### System Analysis
-shows the time of the system have been up, amount of users
->uptime
-display amoun of free and used memory in the system
+shows the time of the system have been up, amount of users <br>
+>   uptime
+
+display amoun of free and used memory in the system <br>
 >free
-show processes goin on
+
+show processes goin on <br>
 >ps
-report disk space usage
+
+report disk space usage <br>
 >df 
-report disk space usage, but in a human format
+
+report disk space usage, but in a human format <br>
 >df -h
-to manipulate disk partition
+
+to manipulate disk partition <br>
 >sudo fdisk -l
-list block devices
+
+list block devices <br>
 >lsblk
-display Linux processes
+
+display Linux processes <br>
 >top
-install htop (better top)
+
+install htop (better top) <br>
 >sudo apt install htop 
 
 
 ## Network
-configure a network interface
+configure a network interface <br>
 >sudo apt install net-tools (install ifconfig)
 
-show routing, network, interfaces
+show routing, network, interfaces <br>
 >ip a
 
 
 ## Manage Packages
-check for updates in the packages
+check for updates in the packages <br>
 >sudo apt update
 
-upgrade a package
->sudo apt upgrade 
+upgrade a package <br>
+>sudo apt upgrade  
 
-search for a package
+search for a package <br>
 >sudo apt search <ex: zip, app> 
 
-install a package
+install a package <br>
 >sudo apt install <zip>
 
-remove a package
+remove a package <br>
 >sudo apt remove <zip>
 
 
 ## Navegation and General Use
-Print text to the terminal
+Print text to the terminal <br>
 >echo <Text, $VAR, ~>
 
-Print to a file
+Print to a file <br>
 >echo <text> >> <file name>
 
-Print Working Directory , show directory
+Print Working Directory , show directory <br>
 >pwd 
 
 ls : list , show whats in the folder
@@ -108,19 +116,19 @@ diff <file_1> <file_2>
 
 
 ### SSH Keys
-Create SSH Key (press Enter for defaults)
+Create SSH Key (press Enter for defaults) <br>
 >ssh-keygen -t ed25519 -C "afa1823@gmail.com"
 
-Start SSH Agent
+Start SSH Agent <br>
 >eval "$(ssh-agent -s)"
 
-Add Key
+Add Key <br>
 >ssh-add ~/.ssh/id_ed25519
 
-Copy Public Key
+Copy Public Key <br>
 >cat ~/.ssh/id_ed25519.pub
 
-Add Key To GitHub
+Add Key To GitHub <br>
 >>GitHub → Settings → SSH and GPG Keys → New SSH Key
 >>Paste key → Save.
 
