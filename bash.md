@@ -1,47 +1,46 @@
 # Bash Commands
 
-    - Info:
-        All commands are Case Sensitive
-        apt : Advanced Package Tool
-        sudo : superuser do
-        ~ : /home/adr11an
-
+## Info:
+All commands are Case Sensitive
+apt : Advanced Package Tool
+sudo : superuser do
+~ : /home/adr11an
 
 ### Admin
     - Check for Linux Distro
-        lsb_release -a
+        ```lsb_release -a``` 
     - Update System
-        sudo apt update
+        ```sudo apt update```
 
     ? delete user
-        sudo deluser --remove-home username
+        ```sudo deluser --remove-home username```
     ? stop user activity
-        sudo kill -9 $(pgrep -u oldname)
+        ```sudo kill -9 $(pgrep -u oldname)```
     ? search for users
-        cut -d: -f1 /etc/passwd
+        ```cut -d: -f1 /etc/passwd```
     ? human user
-        awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
+        ```awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd```
 
 
 ### System Analysis
     - shows the time of the system have been up, amount of users
-        uptime
+        ```uptime```
     - display amoun of free and used memory in the system
-        free
+        ```free```
     - show processes goin on
-        ps
+        ```ps```
     - report disk space usage
-        df 
+        ```df```
     - report disk space usage, but in a human format
-        df -h
+        ```df -h```
     - to manipulate disk partition
-        sudo fdisk -l
+        ```sudo fdisk -l```
     - list block devices
-        lsblk
+        ```lsblk```
     - display Linux processes
-        top
+        ```top```
     - install htop (better top)
-        sudo apt install htop 
+        ```sudo apt install htop``` 
 
 
 ### Network
