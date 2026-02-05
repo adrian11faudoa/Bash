@@ -95,7 +95,22 @@ wc <file.txt> <<word count: showed you how many lines were in the file, how many
 diff <file_1> <file_2> 
 
 
+### SSH Keys
+    - Create SSH Key (press Enter for defaults)
+        ssh-keygen -t ed25519 -C "afa1823@gmail.com"
 
+    - Start SSH Agent
+        eval "$(ssh-agent -s)"
+
+    - Add Key
+        ssh-add ~/.ssh/id_ed25519
+
+    - Copy Public Key
+        cat ~/.ssh/id_ed25519.pub
+
+    - Add Key To GitHub
+        GitHub → Settings → SSH and GPG Keys → New SSH Key
+        Paste key → Save.
 
 
 
