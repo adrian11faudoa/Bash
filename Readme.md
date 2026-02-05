@@ -51,27 +51,27 @@ Show processes goin on
 
     ps
 
-    Report disk space usage 
+Report disk space usage 
 
-        df 
+    df 
 
-    Report disk space usage, but in a human format 
+Report disk space usage, but in a human format 
 
-        df -h
+    df -h
 
-    Use to manipulate disk partition 
+Use to manipulate disk partition 
 
-        sudo fdisk -l
+    sudo fdisk -l
 
-    List block devices 
+List block devices 
 
-        lsblk
+    lsblk
 
 
 
-    ? Install htop (better top) 
+? Install htop (better top) 
 
-        sudo apt install htop 
+    sudo apt install htop 
 
 <br>
 
@@ -223,71 +223,126 @@ Add Key To GitHub
 <br>
 
 
-
-clear : clean the terminal
-
---help : Help Flag, to use with other commands
-
-man <command> :manual of the command
-
-
-mkdir <folder name> : make a new folder
-
-mkdir <folder path>/<new folder name> : create a new folder in other directory
-
-mkdir -p <folder>/<child folder>/<child child folder> : to make directories inside other
-
-touch <file name> /or/ <directory>: create a file
-
-
-cp <file> <destination> : copy a file to a folder
-
-cp -r <folder> <destination> : copy a folder to a new folder
-
-cp <filename> <new_name> : copy a file to a new file
-
-mv <file name> <new file name> /or/ <destination> /+ or/ <new name>: rename or move something
-
-
-find : to view a file tree, shows doc in the directory and inside of each
-
-find <folder> : to view the tree from a different folder
-
-find -name <file name> /or/ <folder name> : search for a file directory or folder
-
-
-rmdir <folder name> : remove directory
-
-rmdir -r <folder name> : remove directory with everything inside
-
-rmdir -p <folder>/<child folder>/<>
-
-rm <file name> : remove a file
-
-rm -rf <folder> : to delete a directory
-
-exit : exit the terminal
-
-
-
-sleep <sec>: pause execution for a num of sec
+clean the terminal
     
-<echo hello test> > <filename.txt> <<redirect an output to a file, create or overwrite a file
-<echo hello test> >> <filename.txt> <<redirect an output to a file, append
+    clear 
 
-<command> < <filename_for_stdin>
+Help Flag, to use with other commands
+   
+    --help
 
-<command_1> | <command_2> <<This will take the stdout from command_1 and use it as the stdin for command_2
+manual of the command
+    
+    man <command>
 
-<<grep is a command for searching for patterns in text
-grep --color -n '<pattern>' <filename>
+make a new folder
+    
+    mkdir <folder name>
 
-sed 's/<pattern_1>/<replacement_1>/; s/<pattern_2>/<replacement_2>/'
+create a new folder in other directory
+    
+    mkdir <folder path>/<new folder name>
 
-<<diff is a command to view the difference between two files
+to make directories inside other
+    
+    mkdir -p <folder>/<child folder>/<child child folder>
+
+create a file
+    
+    touch <file name> /or/ <directory>
+
+
+copy a file to a folder
+    
+    cp <file> <destination>
+
+copy a folder to a new folder
+    
+    cp -r <folder> <destination>
+
+copy a file to a new file
+    
+    cp <filename> <new_name>
+
+rename or move something
+    
+    mv <file name> <new file name> /or/ <destination> /+ or/ <new name>
+
+
+to view a file tree, shows doc in the directory and inside of each
+    
+    find
+
+to view the tree from a different folder
+    
+    find <folder>
+
+search for a file directory or folder
+    
+    find -name <file name> /or/ <folder name>
+
+
+remove directory
+    
+    rmdir <folder name>
+
+remove directory with everything inside
+    
+    rmdir -r <folder name>
+
+    
+    rmdir -p <folder>/<child folder>/<>
+
+remove a file
+    
+    rm <file name>
+
+to delete a directory
+    
+    rm -rf <folder>
+
+exit the terminal
+    
+    exit
+
+
+pause execution for a num of sec
+    
+    sleep <sec>
+    
+redirect an output to a file, create or overwrite a file
+
+    <echo hello test> > <filename.txt> 
+
+redirect an output to a file, append
+    
+    <echo hello test> >> <filename.txt>
+
+
+
+This will take the stdout from command_1 and use it as the stdin for command_2
+    
+    <command_1> | <command_2>
+
+grep is a command for searching for patterns in text
+    
+    grep --color -n '<pattern>' <filename>
+
+
+diff is a command to view the difference between two files
+
     diff <file_1> <file_2>
 
 
 print the content of a file
     
     cat <file>
+
+
+
+
+
+sed 's/<pattern_1>/<replacement_1>/; s/<pattern_2>/<replacement_2>/'
+
+
+<command> < <filename_for_stdin>
