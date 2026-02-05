@@ -34,7 +34,7 @@ Update System
     awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
 
 
-### System Analysis
+## System Analysis
 shows the time of the system have been up, amount of users 
  
     uptime
@@ -157,13 +157,15 @@ go to the root file
 
     cd /
 
-
+<br>
 info about a file
+    
     file <file with extension> 
 
 print the content of a file or 
     
     cat <file>
+
 concatenate files together
     
     cat <file> <file2> > <all file> 
