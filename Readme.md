@@ -5,7 +5,7 @@
 All commands are Case Sensitive <br>
 apt : Advanced Package Tool <br>
 sudo : superuser do <br>
- ~ : /home/adr11an <br>
+ ~ : /home/<username> <br>
 
 
 ## Admin
@@ -21,143 +21,193 @@ Update System
     
     sudo deluser --remove-home username
 
-? stop user activity <br>
+? stop user activity 
     
     sudo kill -9 $(pgrep -u oldname)
 
-? search for users <br>
+? search for users 
     
     cut -d: -f1 /etc/passwd
 
-? human user <br>
+? human user 
     
     awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
 
 
 ### System Analysis
-shows the time of the system have been up, amount of users <br>
+shows the time of the system have been up, amount of users 
  
     uptime
 
-display amoun of free and used memory in the system <br>
+display amoun of free and used memory in the system 
 
     free
 
-show processes goin on <br>
+show processes goin on 
 
     ps
 
-report disk space usage <br>
+report disk space usage 
 
     df 
 
-report disk space usage, but in a human format <br>
+report disk space usage, but in a human format 
 
     df -h
 
-to manipulate disk partition <br>
+to manipulate disk partition 
 
     sudo fdisk -l
 
-list block devices <br>
+list block devices 
 
     lsblk
 
-display Linux processes <br>
+display Linux processes 
 
     top
 
-install htop (better top) <br>
+install htop (better top) 
 
     sudo apt install htop 
 
 
 ## Network
-configure a network interface <br>
+configure a network interface 
     
     sudo apt install net-tools (install ifconfig)
 
-show routing, network, interfaces <br>
+show routing, network, interfaces 
 
     ip a
 
 
 ## Manage Packages
-check for updates in the packages <br>
+check for updates in the packages 
     
     sudo apt update
 
-upgrade a package <br>
+upgrade a package 
 
     sudo apt upgrade  
 
-search for a package <br>
+search for a package 
 
     sudo apt search <ex: zip, app> 
 
-install a package <br>
+install a package 
     
     sudo apt install <zip>
 
-remove a package <br>
+remove a package 
 
     sudo apt remove <zip>
 
 
 ## Navegation and General Use
-Print text to the terminal <br>
+Print text to the terminal 
 
     echo <Text, $VAR, ~>
 
-Print to a file <br>
+Print to a file 
 
     echo <text> >> <file name>
 
-Print Working Directory , show directory <br>
+Print Working Directory , show directory 
 
     pwd 
 
-ls : list , show whats in the folder
-ls -l : list the contents with a "long list format"
-ls -a /or/ --all: list all the content, even hidden
-ls -la : join together -l and -a
-ls -lah : -h to make it human readeable
-ls / :list whats in the root file system
+list , show whats in the folder
 
-cd <folder_name> : change directory
-cd .. : go back a folder
-cd ../.. :go back 2 folders, each set of dots represent a folder
-cd / : go to the root file
+    ls
 
-file <file with extension> : info about a file 
-cat <file> : print the content of a file or 
-cat <file> <file2> > <all file> : concatenate files together
-head <file> : shows first lines in a file
-tail <file> : shows last lines in a file
-more <filename> : to see what's in a file
-wc <file.txt> <<word count: showed you how many lines were in the file, how many words, and how many bytes
-<<diff is a command to view the difference between two files
-diff <file_1> <file_2> 
+list the contents with a "long list format"
+
+    ls -l
+
+list all the content, even hidden
+
+    ls -a /or/ --all
+
+join together -l and -a
+
+    ls -la
+
+-h to make it human readeable
+
+    ls -lah
+
+list whats in the root file system
+
+    ls /
+
+change directory
+
+    cd <folder_name>
+
+go back a folder
+
+    cd ..
+
+go back 2 folders, each set of dots represent a folder
+
+    cd ../..
+
+go to the root file
+
+    cd /
+
+
+info about a file
+    file <file with extension> 
+
+print the content of a file or 
+    
+    cat <file>
+concatenate files together
+    
+    cat <file> <file2> > <all file> 
+
+shows first lines in a file
+    
+    head <file> 
+
+shows last lines in a file
+    
+    tail <file> 
+
+to see what's in a file
+    
+    more <filename> 
+
+
+word count: showed you how many lines were in the file, how many words, and how many bytes
+    
+    wc <file.txt>
+
+diff is a command to view the difference between two files
+    
+    diff <file_1> <file_2> 
 
 
 ### SSH Keys
-Create SSH Key (press Enter for defaults) <br>
+Create SSH Key (press Enter for defaults) 
 
     ssh-keygen -t ed25519 -C "afa1823@gmail.com"
 
-Start SSH Agent <br>
+Start SSH Agent 
     
     eval "$(ssh-agent -s)"
 
-Add Key <br>
+Add Key 
     
     ssh-add ~/.ssh/id_ed25519
 
-Copy Public Key <br>
+Copy Public Key 
 
     cat ~/.ssh/id_ed25519.pub
 
-Add Key To GitHub <br>
+Add Key To GitHub 
     
     GitHub → Settings → SSH and GPG Keys → New SSH Key
     Paste key → Save.
