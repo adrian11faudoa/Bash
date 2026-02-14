@@ -3,24 +3,19 @@
 ## Info
 
 >All commands are Case Sensitive <br>
->apt : Advanced Package Tool <br>
->dpkg : Debian Package
 >sudo : superuser do <br>
 > ~ : /home/username <br>
 
->dpkg = low-level tool that installs/removes local .deb files. <br>
->apt = high-level tool that downloads + installs + manages dependencies + repositories, and internally uses dpkg <br>
+>dpkg : Debian Package = low-level tool that installs/removes local .deb files. <br>
+>apt : Advanced Package Tool = high-level tool that downloads + installs + manages dependencies + repositories, and internally uses dpkg <br>
 
 <br>
 
-## Admin
+
+## Admin Management
 ### Check for Linux Distro 
     
     lsb_release -a
-
-### Update System 
-    
-    sudo apt update
 
 ? delete user 
     
@@ -40,8 +35,32 @@
 
 <br>
 
-## System Analysis
+## Manage Packages
 
+### Refresh the list of available software packages from your configured repositories
+    
+    sudo apt update
+
+### Install the newest versions of software that are already installed on your system
+
+    sudo apt upgrade  
+
+### Search for a package 
+
+    sudo apt search <ex: zip, app> 
+
+### Install a package 
+    
+    sudo apt install <zip>
+
+### Remove a package 
+
+    sudo apt remove <zip>
+
+<br>
+
+
+## System Analysis
 ### Display Linux processes 
 
     top
@@ -85,8 +104,8 @@
 
 <br>
 
-## Network
 
+## Network
 ? Configure a network interface (install ifconfig)
     
     sudo apt install net-tools 
@@ -97,33 +116,9 @@
 
 <br>
 
-## Manage Packages
-
-### Refresh the list of available software packages from your configured repositories
-    
-    sudo apt update
-
-### Install the newest versions of software that are already installed on your system
-
-    sudo apt upgrade  
-
-### Search for a package 
-
-    sudo apt search <ex: zip, app> 
-
-### Install a package 
-    
-    sudo apt install <zip>
-
-### Remove a package 
-
-    sudo apt remove <zip>
-
-<br>
 
 
 ## Navegation and General Use
-
 ### Print Working Directory, show directory 
 
     pwd 
@@ -168,6 +163,10 @@
 
     cd /
 
+<br>
+
+
+## Files Management
 ### Print text to the terminal 
 
     echo < text, $Var, ~ >
@@ -176,45 +175,40 @@
 
     echo <text> >> <file name>
 
-
-<br>
-Info about a file
+### Show info about a file
     
     file <file with extension> 
 
-Print the content of a file or 
+### Print the content of a file in terminal
     
     cat <file>
 
-Concatenate files together
+### Concatenate files together
     
     cat <file> <file2> > <all file> 
 
-Shows first lines in a file
+### Shows first lines in a file
     
     head <file> 
 
-Shows last lines in a file
+### Shows last lines in a file
     
     tail <file> 
 
-To see what's in a file
+### See what's in a file
     
     more <filename> 
 
-<br>
-Word count: showed you how many lines were in the file, how many words, and how many bytes
+### Word count: showed you how many lines were in the file, how many words, and how many bytes
     
     wc <file.txt>
 
-Diff is a command to view the difference between two files
+### command to view the difference between two files
     
     diff <file_1> <file_2> 
 
-<br>
 
-### SSH Keys
-
+## SSH Keys
 ### Check for SSH Key
 
     ls ~/.ssh
@@ -242,87 +236,100 @@ Diff is a command to view the difference between two files
 <br>
 
 
-clean the terminal
+## General Use
+### clean the terminal
     
     clear 
 
-Help Flag, to use with other commands
+### Help Flag, to use with other commands
    
     --help
 
-manual of the command
+### manual of the command
     
     man <command>
 
-make a new folder
+### exit the terminal
+    
+    exit
+
+
+## Create  
+### make a new folder
     
     mkdir <folder name>
 
-create a new folder in other directory
+### create a new folder in other directory
     
     mkdir <folder path>/<new folder name>
 
-to make directories inside other
+### to make directories inside other
     
     mkdir -p <folder>/<child folder>/<child child folder>
 
-create a file
+### create a file
     
     touch <file name> /or/ <directory>
 
 
-copy a file to a folder
+## Copy 
+### copy a file to a folder
     
     cp <file> <destination>
 
-copy a folder to a new folder
+### copy a folder to a new folder
     
     cp -r <folder> <destination>
 
-copy a file to a new file
+### copy a file to a new file
     
     cp <filename> <new_name>
 
-rename or move something
+
+## Rename
+### rename or move something
     
     mv <file name> <new file name> /or/ <destination> /+ or/ <new name>
 
 
-to view a file tree, shows doc in the directory and inside of each
+## Search
+### to view a file tree, shows doc in the directory and inside of each
     
     find
 
-to view the tree from a different folder
+### to view the tree from a different folder
     
     find <folder>
 
-search for a file directory or folder
+### search for a file directory or folder
     
     find -name <file name> /or/ <folder name>
 
 
-remove directory
+## Delete
+### remove directory
     
     rmdir <folder name>
 
-remove directory with everything inside
+### remove directory with everything inside
     
     rmdir -r <folder name>
 
     
     rmdir -p <folder>/<child folder>/<>
 
-remove a file
+### remove a file
     
     rm <file name>
 
-to delete a directory
+### to delete a directory
     
     rm -rf <folder>
 
-exit the terminal
-    
-    exit
+
+
+
+
 
 
 pause execution for a num of sec
