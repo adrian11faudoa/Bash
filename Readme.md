@@ -287,9 +287,15 @@
 
 
 ## Rename
-### Rename or move something
-    
-    mv <file name> <new file name> /or/ <destination> /+ or/ <new name>
+### Rename a file
+
+    mv <file name> <new file name> 
+
+### Move and rename a file
+
+    mv <file name> <destination> <new file name>
+
+<br>
 
 
 ## Search
