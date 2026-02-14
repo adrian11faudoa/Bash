@@ -2,14 +2,14 @@
 
 ## Info
 
-All commands are Case Sensitive <br>
-apt : Advanced Package Tool <br>
-dpkg : Debian Package
-sudo : superuser do <br>
- ~ : /home/username <br>
+>All commands are Case Sensitive <br>
+>apt : Advanced Package Tool <br>
+>dpkg : Debian Package
+>sudo : superuser do <br>
+> ~ : /home/username <br>
 
-dpkg = low-level tool that installs/removes local .deb files. <br>
-apt = high-level tool that downloads + installs + manages dependencies + repositories, and internally uses dpkg <br>
+>dpkg = low-level tool that installs/removes local .deb files. <br>
+>apt = high-level tool that downloads + installs + manages dependencies + repositories, and internally uses dpkg <br>
 
 <br>
 
