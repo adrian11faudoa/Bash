@@ -1,18 +1,24 @@
 # Bash Commands
+
 ## Info
+
 All commands are Case Sensitive <br>
 apt : Advanced Package Tool <br>
+dpkg : Debian Package
 sudo : superuser do <br>
  ~ : /home/username <br>
+
+dpkg = low-level tool that installs/removes local .deb files. <br>
+apt = high-level tool that downloads + installs + manages dependencies + repositories, and internally uses dpkg <br>
 
 <br>
 
 ## Admin
-Check for Linux Distro 
+### Check for Linux Distro 
     
     lsb_release -a
 
-Update System 
+### Update System 
     
     sudo apt update
 
@@ -35,38 +41,42 @@ Update System
 <br>
 
 ## System Analysis
-Shows the time, since when the system have been up, and amount of users 
- 
-    uptime
 
-Display amoun of free and used memory in the system 
-
-    free
-
-display Linux processes 
+### Display Linux processes 
 
     top
 
-Show processes goin on 
 
-    ps
+### Display amoun of free and used memory in the system 
 
-Report disk space usage 
+    free
+
+### Report disk space usage 
 
     df 
 
-Report disk space usage, but in a human format 
+### Report disk space usage, but in a human format 
 
     df -h
 
-Use to manipulate disk partition 
+### Use to manipulate disk partition 
 
     sudo fdisk -l
 
-List block devices 
+
+### Shows the time, since when the system have been up, and amount of users 
+ 
+    uptime
+
+
+### Show processes goin on 
+
+    ps
+
+
+### List block devices 
 
     lsblk
-
 
 
 ? Install htop (better top) 
@@ -76,7 +86,8 @@ List block devices
 <br>
 
 ## Network
-Configure a network interface (install ifconfig)
+
+? Configure a network interface (install ifconfig)
     
     sudo apt install net-tools 
 
@@ -87,23 +98,24 @@ Configure a network interface (install ifconfig)
 <br>
 
 ## Manage Packages
-Check for updates in the packages 
+
+### Refresh the list of available software packages from your configured repositories
     
     sudo apt update
 
-Upgrade a package 
+### Install the newest versions of software that are already installed on your system
 
     sudo apt upgrade  
 
-Search for a package 
+### Search for a package 
 
     sudo apt search <ex: zip, app> 
 
-install a package 
+### Install a package 
     
     sudo apt install <zip>
 
-Remove a package 
+### Remove a package 
 
     sudo apt remove <zip>
 
