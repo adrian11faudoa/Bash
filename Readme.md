@@ -1,7 +1,6 @@
 # Bash Commands
 
 ## Info
-
 >All commands are Case Sensitive <br>
 >sudo : superuser do <br>
 > ~ : /home/username <br>
@@ -35,8 +34,8 @@
 
 <br>
 
-## Manage Packages
 
+## Manage Packages
 ### Refresh the list of available software packages from your configured repositories
     
     sudo apt update
@@ -65,7 +64,6 @@
 
     top
 
-
 ### Display amoun of free and used memory in the system 
 
     free
@@ -82,21 +80,17 @@
 
     sudo fdisk -l
 
-
 ### Shows the time, since when the system have been up, and amount of users 
  
     uptime
-
 
 ### Show processes goin on 
 
     ps
 
-
 ### List block devices 
 
     lsblk
-
 
 ? Install htop (better top) 
 
@@ -115,8 +109,6 @@
         ip a
 
 <br>
-
-
 
 ## Navegation and General Use
 ### Print Working Directory, show directory 
@@ -199,13 +191,15 @@
     
     more <filename> 
 
-### Word count: showed you how many lines were in the file, how many words, and how many bytes
+### Word count: showed you how many lines, words, bytes were in the file
     
     wc <file.txt>
 
-### command to view the difference between two files
+### See difference between two files
     
     diff <file_1> <file_2> 
+
+<br>
 
 
 ## SSH Keys
@@ -221,11 +215,11 @@
     
     eval "$(ssh-agent -s)"
 
-### Add Key to SSH Agent (Store it)
+### Add Key to SSH Agent (Save)
     
     ssh-add ~/.ssh/id_ed25519
 
-### Show Public Key in Terminal and Copy 
+### Show Public Key in Terminal
 
     cat ~/.ssh/id_ed25519.pub
 
@@ -237,7 +231,7 @@
 
 
 ## General Use
-### clean the terminal
+### Clean the terminal
     
     clear 
 
@@ -245,87 +239,96 @@
    
     --help
 
-### manual of the command
+### Manual of the command
     
     man <command>
 
-### exit the terminal
+### Exit the terminal
     
     exit
 
+<br>
+
 
 ## Create  
-### make a new folder
+### Make a new folder
     
     mkdir <folder name>
 
-### create a new folder in other directory
+### Create a new folder in other directory
     
     mkdir <folder path>/<new folder name>
 
-### to make directories inside other
+### Make directories inside other
     
     mkdir -p <folder>/<child folder>/<child child folder>
 
-### create a file
+### Create a file
     
     touch <file name> /or/ <directory>
 
+<br>
+
 
 ## Copy 
-### copy a file to a folder
+### Copy a file to a folder
     
     cp <file> <destination>
 
-### copy a folder to a new folder
+### Copy a folder to a new folder
     
     cp -r <folder> <destination>
 
-### copy a file to a new file
+### Copy a file to a new file
     
     cp <filename> <new_name>
 
+<br>
+
 
 ## Rename
-### rename or move something
+### Rename or move something
     
     mv <file name> <new file name> /or/ <destination> /+ or/ <new name>
 
 
 ## Search
-### to view a file tree, shows doc in the directory and inside of each
+### View a file tree, shows doc in the directory and inside of each
     
     find
 
-### to view the tree from a different folder
+### View the tree from a different folder
     
     find <folder>
 
-### search for a file directory or folder
+### Search for a file directory or folder
     
     find -name <file name> /or/ <folder name>
 
+<br>
+
 
 ## Delete
-### remove directory
+### Remove directory
     
     rmdir <folder name>
 
-### remove directory with everything inside
+### Remove directory with everything inside
     
     rmdir -r <folder name>
 
     
     rmdir -p <folder>/<child folder>/<>
 
-### remove a file
+### Remove a file
     
     rm <file name>
 
-### to delete a directory
+### Delete a directory
     
     rm -rf <folder>
 
+<br>
 
 
 
