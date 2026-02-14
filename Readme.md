@@ -121,58 +121,61 @@ apt = high-level tool that downloads + installs + manages dependencies + reposit
 
 <br>
 
+
 ## Navegation and General Use
-Print text to the terminal 
 
-    echo <Text, $VAR, ~>
-
-Print to a file 
-
-    echo <text> >> <file name>
-
-Print Working Directory , show directory 
+### Print Working Directory, show directory 
 
     pwd 
 
-List , show whats in the folder
+### List, show whats in the folder
 
     ls
 
-List the contents with a "long list format"
+### List the contents with a "long list format"
 
     ls -l
 
-List all the content, even hidden (-a /or/ --all)
+### List all the content, even hidden (-a /or/ --all)
 
     ls -a
 
-Join together -l and -a
+### Join together -l and -a
 
     ls -la
 
--h to make it human readeable
+### -h to make it human readeable
 
     ls -lah
 
-List whats in the root file system
+### List whats in the root file system
 
     ls /
 
-Change directory
+### Change directory
 
     cd <folder_name>
 
-Go back a folder
+### Go back a folder
 
     cd ..
 
-Go back 2 folders, each set of dots represent a folder
+### Go back 2 folders, each set of dots represent a folder
 
     cd ../..
 
-Go to the root file
+### Go to the root file
 
     cd /
+
+### Print text to the terminal 
+
+    echo < text, $Var, ~ >
+
+### Print to a file 
+
+    echo <text> >> <file name>
+
 
 <br>
 Info about a file
@@ -211,26 +214,30 @@ Diff is a command to view the difference between two files
 <br>
 
 ### SSH Keys
-Create SSH Key (press Enter for defaults) 
+
+### Check for SSH Key
+
+    ls ~/.ssh
+
+### Create new SSH Key (press Enter for defaults, no passphrase) 
 
     ssh-keygen -t ed25519 -C "afa1823@gmail.com"
 
-Start SSH Agent 
+### Start SSH Agent (and run it in shell)
     
     eval "$(ssh-agent -s)"
 
-Add Key 
+### Add Key to SSH Agent (Store it)
     
     ssh-add ~/.ssh/id_ed25519
 
-Copy Public Key 
+### Show Public Key in Terminal and Copy 
 
     cat ~/.ssh/id_ed25519.pub
 
-Add Key To GitHub 
+### Add Key To GitHub 
     
-    GitHub → Settings → SSH and GPG Keys → New SSH Key
-    Paste key → Save.
+>GitHub → Settings → SSH and GPG Keys → New SSH Key → Paste key → Save
 
 <br>
 
