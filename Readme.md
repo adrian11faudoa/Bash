@@ -66,7 +66,7 @@
 
     sudo dpkg -i *.deb
 
-### Fix broken packages and install
+### Fix broken packages and install, Finds and installs missing dependencies automatically
 
     sudo apt -f install
 
@@ -173,6 +173,24 @@
 
 
 ## Files Management
+### Craete a .tar file 
+### c: create, v: show files, f: archive filename, *: all inside the folder 
+
+    tar -cvf archive.tar *
+
+### Create a .tar file and compress it
+### z: gzip
+
+    tar -czvf archive.tar *
+
+### Extract .tar files
+
+    tar -xvf archive.tar
+
+### Extract .tar.gz files
+
+    tar -xzvf archive.tar.gz
+
 ### Print text to the terminal 
 
     echo < text, $Var, ~ >
