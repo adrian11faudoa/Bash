@@ -12,9 +12,9 @@
 >apt : Advanced Package Tool = high-level tool that downloads + installs + manages dependencies + repositories, and internally uses dpkg <br>
 
 >.tar file: Is an archive file that combines many files and folders into one single file <br>
-    It stores multiple files together <br>
-    It does NOT compress them <br>
-    It just bundles them <br>
+&nbsp;&nbsp;&nbsp;It stores multiple files together <br>
+&nbsp;&nbsp;&nbsp;It does NOT compress them <br>
+&nbsp;&nbsp;&nbsp;It just bundles them <br>
 
 
 ## Admin Management
