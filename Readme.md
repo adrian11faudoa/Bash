@@ -2,17 +2,19 @@
 
 ## Info
 >All commands are Case Sensitive <br>
+
 >sudo : superuser do <br>
+
 > ~ : /home/username <br>
 
 >dpkg : Debian Package = low-level tool that installs/removes local .deb files. <br>
+
 >apt : Advanced Package Tool = high-level tool that downloads + installs + manages dependencies + repositories, and internally uses dpkg <br>
 
-
 >.tar file: Is an archive file that combines many files and folders into one single file <br>
-It stores multiple files together <br>
-It does NOT compress them <br>
-It just bundles them <br>
+    It stores multiple files together <br>
+    It does NOT compress them <br>
+    It just bundles them <br>
 
 
 ## Admin Management
